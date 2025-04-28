@@ -22,13 +22,17 @@ header {}
 .nav-links a {}
 
 .nav-links a:hover {
-    color: ;
+    color: yellow;
 }
 
 
 /*SECTIONS*/
 
 #feed {}
+
+#galerie {}
+
+#jeux {}
 
 
 /*FOOTER*/
