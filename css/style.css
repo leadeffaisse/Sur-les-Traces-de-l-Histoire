@@ -1,0 +1,36 @@
+/*BODY*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*HEADER*/
+
+header {}
+
+.logo {}
+
+.navbar {}
+
+.nav-links {}
+
+.nav-links li {}
+
+.nav-links a {}
+
+.nav-links a:hover {
+    color: ;
+}
+
+
+/*SECTIONS*/
+
+#feed {}
+
+
+/*FOOTER*/
+
+footer {}
