@@ -1,6 +1,14 @@
 /*BODY*/
 body {
-background-color: #fffdf0;
+    background-color: #fffdf0;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
 }
 
 ul {
@@ -9,10 +17,16 @@ ul {
     padding: 0;
 }
 
+.refresh-btn {
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
 .joke-box {
     background-color: white;
     border: 1px solid;
     padding: 1em;
+    margin: 1em;
     border-radius: 10px;
     font-size: 12;
     text-align: center;
