@@ -1,10 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
+    requestJoke();
+
+    const refreshIcon = document.getElementById("refresh");
+    refreshIcon.addEventListener("click", () => {
+requestJoke();
+    });
+});
+
+function requestJoke() {
     fetch("https://v2.jokeapi.dev/joke/Any?lang=fr")
         .then(res => res.json())
         .then(joke => {
             addJoke(joke)
-        });
-});
+        }
+    );
+}
 
 function addJoke(joke) {
     const container = document.getElementById("joke-container");
