@@ -36,3 +36,8 @@ function addJoke(joke) {
     }
     return bloc;
 }
+
+function menuBurger() {
+    let nav = document.getElementById("myNavbar");
+    nav.classList.toggle("responsive");
+}

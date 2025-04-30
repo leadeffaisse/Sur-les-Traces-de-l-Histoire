@@ -10,13 +10,21 @@
 
 <body>
     <header>
-        <nav class="navbar">
-            <h1 class="logo">Sur les Traces de l'Histoire</h1>
-            <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="galerie.html">Galerie</a></li>
-                <li><a href="jeux.html">Jeux</a></li>
-            </ul>
+        <h1 class="logo">Sur les Traces de l'Histoire</h1>
+        <nav class="navbar" id="myNavbar">
+            
+            <a href="index.html" class="active">Accueil</a>
+            <a href="galerie.html">Galerie</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="location.href='jeux.html'">Jeux
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="demineur.html">Démineur</a>
+                    <a href="jeu-de-loie.html">Jeu de l'oie</a>
+                </div>
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="menuBurger()">&#9776;</a>
+            </div>
         </nav>
     </header>
 
