@@ -32,3 +32,47 @@ function getMeme() {
             });
     }
 }
+
+function addMemeToGallery(url, title = "") {
+    const container = document.getElementById("galerie");
+    const memeCard = document.createElement("div");
+    memeCard.className = "meme-card";
+
+    const img = document.createElement("img");
+    img.src = url;
+    img.alt = title;
+
+    const h3 = document.createElement("h3");
+    h3.textContent = title || "Sans titre";
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Supprimer";
+    deleteBtn.style.marginTop = "10px";
+    deleteBtn.onclick = () => memeCard.remove();
+
+    memeCard.appendChild(img);
+    memeCard.appendChild(h3);
+    memeCard.appendChild(deleteBtn);
+    container.appendChild(memeCard);
+};
+
+function addCustomMeme(event) {
+    event.preventDefault();
+    const url = document.getElementById("customUrl").value;
+    const title = document.getElementById("customTitle").value;
+    const fileInput = document.getElementById("customFile");
+    const file = fileInput.files[0];
+
+    if (url) {
+        addMemeToGallery(url, title);
+    } else if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            addMemeToGallery(e.target.result, title);
+        };
+        reader.readAsDataURL(file);
+    } else {
+        alert("Veuillez entrer une URL ou un fichier image.");
+    }
+    event.target.reset();
+};
