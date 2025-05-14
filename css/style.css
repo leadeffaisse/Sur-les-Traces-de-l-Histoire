@@ -19,10 +19,28 @@ ul {
 }
 
 button {
-    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    padding: 5px 5px;
     margin: 10px;
-    font-size: 16px;
     cursor: pointer;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.btn-group button {
+    float: left;
+    margin: 0%;
+}
+
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .refresh-btn {
@@ -52,6 +70,21 @@ button {
     font-style: italic;
 }
 
+form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+form button {
+    margin: 0%;
+    padding: 1px 6px;
+}
+
+.form-field {
+    margin-bottom: 10px;
+}
+
 .meme-card {
     background-color: white;
     border-radius: 10px;
@@ -72,10 +105,6 @@ button {
 }
 
 /*HEADER*/
-
-header {}
-
-.logo {}
 
 .navbar {
     display: flex;
@@ -101,8 +130,6 @@ header {}
 .navbar .icon {
     display: none;
 }
-
-.dropdown {}
 
 .dropdown .dropbtn {
     margin: 0;

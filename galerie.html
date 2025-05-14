@@ -10,22 +10,45 @@
 
 <body>
     <header>
-        <nav class="navbar">
-            <h1 class="logo">Sur les Traces de l'Histoire</h1>
-            <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="galerie.html">Galerie</a></li>
-                <li><a href="jeux.html">Jeux</a></li>
-            </ul>
+        <h1 class="logo">Sur les Traces de l'Histoire</h1>
+        <nav class="navbar" id="myNavbar">
+
+            <a href="index.html">Accueil</a>
+            <a href="galerie.html" class="active">Galerie</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="location.href='jeux.html'">Jeux
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="demineur.html">Démineur</a>
+                    <a href="jeu-de-loie.html">Jeu de l'oie</a>
+                </div>
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="menuBurger()">&#9776;</a>
+            </div>
         </nav>
     </header>
 
     <main>
         <h1>Galerie</h1>
-        <button onclick="setColumns(1)">1 colonne</button>
-        <button onclick="setColumns(3)">3 colonnes</button>
-        <button onclick="getMeme()">Afficher les memes</button>
+        <button onclick="getMeme()">Refresh</button>
+
+        <h2>Ajouter un meme</h2>
+        <form id="customMemeForm" onsubmit="addCustomMeme(event)">
+            <div class="form-field">
+                <input type="text" id="customTitle" placeholder="Titre (facultatif)">
+                <input type="url" id="customUrl" placeholder="URL de l'image">
+                <input type="file" id="customFile" accept="image/*">
+            </div>
+            <div class="form-field">
+                <button type="submit">Ajouter à la galerie</button>
+            </div>
+        </form>
+        <div class="btn-group">
+            <button onclick="setColumns(1)">1 colonne</button>
+            <button onclick="setColumns(3)">3 colonnes</button>
+        </div>
         <div id="galerie"></div>
+
     </main>
     <footer></footer>
 
